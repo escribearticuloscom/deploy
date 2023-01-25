@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <base href=//>
+  <base href=/>
   <title>escribearticulos.com</title>
   <meta charset=utf-8>
   <meta name=description content="A Quasar Project">
@@ -14,12 +14,17 @@
   <link rel=icon type=image/png sizes=32x32 href=imgs/logo_corto.png>
   <link rel=icon type=image/png sizes=16x16 href=imgs/logo_corto.png>
   <link rel=icon type=image/ico href=imgs/logo_corto.png>
+  <script defer src=/js/vendor.cfe06f51.js></script>
+  <script defer src=/js/app.eacdd50c.js></script>
+  <link href=/css/vendor.265de19d.css rel=stylesheet>
+  <link href=/css/app.31d6cfe0.css rel=stylesheet>
 </head>
 
 <body>
   <script>(function () {
       let redirect = sessionStorage.redirect;
       delete sessionStorage.redirect;
+      console.log("redirect", sessionStorage);
       if (redirect && redirect !== location.href) {
         history.replaceState(null, null, redirect);
       }
